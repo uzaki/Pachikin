@@ -8,6 +8,7 @@ target 'Pachikin' do
   # Pods for Pachikin
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Eureka'
 
   target 'PachikinTests' do
     inherit! :search_paths

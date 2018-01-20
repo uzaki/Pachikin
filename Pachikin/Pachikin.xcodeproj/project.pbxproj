@@ -21,6 +21,7 @@
 		B2910BE52012D79E00D48B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2910BE32012D79E00D48B21 /* LaunchScreen.storyboard */; };
 		B2910BF02012D79E00D48B21 /* PachikinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BEF2012D79E00D48B21 /* PachikinTests.swift */; };
 		B2910BFB2012D79E00D48B21 /* PachikinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BFA2012D79E00D48B21 /* PachikinUITests.swift */; };
+		B2F036022013CDE9006C2612 /* Pachikin-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F036012013CDE9006C2612 /* Pachikin-Bridging-Header.m */; };
 		B2F0EB8420130BFA008AE42B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F0EB8320130BFA008AE42B /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		B2910BF62012D79E00D48B21 /* PachikinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PachikinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2910BFA2012D79E00D48B21 /* PachikinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachikinUITests.swift; sourceTree = "<group>"; };
 		B2910BFC2012D79E00D48B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F036002013CDE9006C2612 /* Pachikin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pachikin-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2F036012013CDE9006C2612 /* Pachikin-Bridging-Header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pachikin-Bridging-Header.m"; sourceTree = "<group>"; };
 		B2F0EB8320130BFA008AE42B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BF155749BA8935ADE3A625FB /* Pods_Pachikin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pachikin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32FB8F7546A14062EF7F9C6 /* Pods-PachikinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachikinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PachikinUITests/Pods-PachikinUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				B2910BDA2012D79E00D48B21 /* AppDelegate.swift */,
 				B2910C0E2012D81B00D48B21 /* Classes */,
 				B2910C0F2012D87200D48B21 /* Resources */,
+				B2F036012013CDE9006C2612 /* Pachikin-Bridging-Header.m */,
+				B2F036002013CDE9006C2612 /* Pachikin-Bridging-Header.h */,
 			);
 			path = Pachikin;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				TargetAttributes = {
 					B2910BD62012D79E00D48B21 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					B2910BEA2012D79E00D48B21 = {
@@ -443,9 +449,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pachikin/Pods-Pachikin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -545,6 +554,7 @@
 				B2668C1D2013205E00580132 /* aViewController.swift in Sources */,
 				B2910BDD2012D79E00D48B21 /* ViewController.swift in Sources */,
 				B2F0EB8420130BFA008AE42B /* TestViewController.swift in Sources */,
+				B2F036022013CDE9006C2612 /* Pachikin-Bridging-Header.m in Sources */,
 				B2910BDB2012D79E00D48B21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +722,7 @@
 			baseConfigurationReference = 0E0B57828E2C782C86F25479 /* Pods-Pachikin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72U96Y9LBS;
 				INFOPLIST_FILE = "$(SRCROOT)/Pachikin/Classes/Config/Info.plist";
@@ -719,6 +730,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pachikin.Pachikin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pachikin/Pachikin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -729,6 +742,7 @@
 			baseConfigurationReference = 68AA331F7B592D14D00DD928 /* Pods-Pachikin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72U96Y9LBS;
 				INFOPLIST_FILE = "$(SRCROOT)/Pachikin/Classes/Config/Info.plist";
@@ -736,6 +750,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pachikin.Pachikin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pachikin/Pachikin-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

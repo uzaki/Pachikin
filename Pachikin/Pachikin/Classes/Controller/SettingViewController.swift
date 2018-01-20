@@ -1,50 +1,61 @@
-//
-//  SettingViewController.swift
-//  Pachikin
-//
-//  Created by uzaki kota on 2018/01/20.
-//  Copyright © 2018年 uzaki kota. All rights reserved.
-//
 
 import UIKit
+import Eureka
 
-class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
-    
-    let cellTitle: [String] = ["パチ禁状況","登録状況変更","リセット"]
+class SettingViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        form
+            +++ SwitchRow(){
+                $0.title = "監視モード"
+                }.onCellSelection({ (cell, row) in
+                    
+                })
+            <<< LabelRow(){
+                $0.title = "リセット"
+                }.onCellSelection{ (cell, row) in
+                    self.resetAlert()
+                }.cellSetup { cell, row in
+                    cell.textLabel?.textColor = .red
+            }
+            +++ Section(){ section in
+                var header = HeaderFooterView<UILabel>(.class)
+                header.height = { 44 }
+                header.onSetupView = {view, _ in
+                    view.text = "登録情報"
+                    view.font = UIFont.systemFont(ofSize: 15)
+                }
+                section.header = header
+            }
+            <<< IntRow(){
+                $0.title = "平均投資額（円/日）"
+                }.onChange({ (row) in
+                    //save realm.
+                })
+            <<< IntRow(){
+                $0.title = "パチンコに行く日数（日/週）"
+                }.onChange({ (row) in
+                    //save realm.
+                })
+            <<< IntRow(){
+                $0.title = "制限日数（日）"
+                }.onChange({ (row) in
+                    //save realm.
+                })
     }
     
-    //tableView
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    func resetAlert(){
+        let alert: UIAlertController = UIAlertController(title: "リセットしますか？", message: "一度リセットした情報は戻すことができません。", preferredStyle:  UIAlertControllerStyle.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.default, handler:{
+            (action: UIAlertAction!) -> Void in
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = cellTitle[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

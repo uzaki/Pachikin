@@ -10,6 +10,8 @@
 		0BC86C7FF538868DDF7D7D8A /* Pods_Pachikin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF155749BA8935ADE3A625FB /* Pods_Pachikin.framework */; };
 		3D66996685563F82CCD9CC33 /* Pods_PachikinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD504E38D1DFD9FAB5A7B2AC /* Pods_PachikinUITests.framework */; };
 		8FDA8F81A31406F963B2414E /* Pods_PachikinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D99FBAC1B5E192BF27A1F98 /* Pods_PachikinTests.framework */; };
+		B2668C1D2013205E00580132 /* aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2668C1C2013205E00580132 /* aViewController.swift */; };
+		B2668C1F2013281B00580132 /* Warning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2668C1E2013281B00580132 /* Warning.mp3 */; };
 		B2910BDB2012D79E00D48B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BDA2012D79E00D48B21 /* AppDelegate.swift */; };
 		B2910BDD2012D79E00D48B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BDC2012D79E00D48B21 /* ViewController.swift */; };
 		B2910BE02012D79E00D48B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2910BDE2012D79E00D48B21 /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		B2910BE52012D79E00D48B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2910BE32012D79E00D48B21 /* LaunchScreen.storyboard */; };
 		B2910BF02012D79E00D48B21 /* PachikinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BEF2012D79E00D48B21 /* PachikinTests.swift */; };
 		B2910BFB2012D79E00D48B21 /* PachikinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BFA2012D79E00D48B21 /* PachikinUITests.swift */; };
+		B2F0EB8420130BFA008AE42B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F0EB8320130BFA008AE42B /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,8 @@
 		6D99FBAC1B5E192BF27A1F98 /* Pods_PachikinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PachikinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9863C0973576AF2F06FA87A4 /* Pods-PachikinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachikinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PachikinTests/Pods-PachikinTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD504E38D1DFD9FAB5A7B2AC /* Pods_PachikinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PachikinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2668C1C2013205E00580132 /* aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = aViewController.swift; path = Pachikin/Classes/Controller/aViewController.swift; sourceTree = SOURCE_ROOT; };
+		B2668C1E2013281B00580132 /* Warning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warning.mp3; sourceTree = "<group>"; };
 		B2910BD72012D79E00D48B21 /* Pachikin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pachikin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2910BDA2012D79E00D48B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2910BDC2012D79E00D48B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		B2910BF62012D79E00D48B21 /* PachikinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PachikinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2910BFA2012D79E00D48B21 /* PachikinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachikinUITests.swift; sourceTree = "<group>"; };
 		B2910BFC2012D79E00D48B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F0EB8320130BFA008AE42B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BF155749BA8935ADE3A625FB /* Pods_Pachikin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pachikin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32FB8F7546A14062EF7F9C6 /* Pods-PachikinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachikinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PachikinUITests/Pods-PachikinUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F9A2338C084A4E22F96E64 /* Pods-PachikinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachikinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PachikinTests/Pods-PachikinTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +188,9 @@
 		B2910C0A2012D7ED00D48B21 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B2668C1C2013205E00580132 /* aViewController.swift */,
 				B2910BDC2012D79E00D48B21 /* ViewController.swift */,
+				B2F0EB8320130BFA008AE42B /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 		B2910C0F2012D87200D48B21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B2668C1E2013281B00580132 /* Warning.mp3 */,
 				B2910BE12012D79E00D48B21 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -347,6 +356,7 @@
 			files = (
 				B2910BE52012D79E00D48B21 /* LaunchScreen.storyboard in Resources */,
 				B2910BE22012D79E00D48B21 /* Assets.xcassets in Resources */,
+				B2668C1F2013281B00580132 /* Warning.mp3 in Resources */,
 				B2910BE02012D79E00D48B21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,10 +419,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pachikin/Pods-Pachikin-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,7 +534,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2668C1D2013205E00580132 /* aViewController.swift in Sources */,
 				B2910BDD2012D79E00D48B21 /* ViewController.swift in Sources */,
+				B2F0EB8420130BFA008AE42B /* TestViewController.swift in Sources */,
 				B2910BDB2012D79E00D48B21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,7 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72U96Y9LBS;
 				INFOPLIST_FILE = "$(SRCROOT)/Pachikin/Classes/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pachikin.Pachikin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -710,7 +724,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72U96Y9LBS;
 				INFOPLIST_FILE = "$(SRCROOT)/Pachikin/Classes/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pachikin.Pachikin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

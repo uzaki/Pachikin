@@ -12,6 +12,8 @@
 		8FDA8F81A31406F963B2414E /* Pods_PachikinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D99FBAC1B5E192BF27A1F98 /* Pods_PachikinTests.framework */; };
 		B2668C1D2013205E00580132 /* aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2668C1C2013205E00580132 /* aViewController.swift */; };
 		B2668C1F2013281B00580132 /* Warning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2668C1E2013281B00580132 /* Warning.mp3 */; };
+		B2668C212013374E00580132 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2668C202013374E00580132 /* SettingViewController.swift */; };
+		B2668C2320133C1100580132 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2668C2220133C1100580132 /* MyPageViewController.swift */; };
 		B2910BDB2012D79E00D48B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BDA2012D79E00D48B21 /* AppDelegate.swift */; };
 		B2910BDD2012D79E00D48B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2910BDC2012D79E00D48B21 /* ViewController.swift */; };
 		B2910BE02012D79E00D48B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2910BDE2012D79E00D48B21 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		AD504E38D1DFD9FAB5A7B2AC /* Pods_PachikinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PachikinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2668C1C2013205E00580132 /* aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = aViewController.swift; path = Pachikin/Classes/Controller/aViewController.swift; sourceTree = SOURCE_ROOT; };
 		B2668C1E2013281B00580132 /* Warning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warning.mp3; sourceTree = "<group>"; };
+		B2668C202013374E00580132 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B2668C2220133C1100580132 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		B2910BD72012D79E00D48B21 /* Pachikin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pachikin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2910BDA2012D79E00D48B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2910BDC2012D79E00D48B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				B2668C1C2013205E00580132 /* aViewController.swift */,
 				B2910BDC2012D79E00D48B21 /* ViewController.swift */,
 				B2F0EB8320130BFA008AE42B /* TestViewController.swift */,
+				B2668C202013374E00580132 /* SettingViewController.swift */,
+				B2668C2220133C1100580132 /* MyPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -534,6 +540,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2668C212013374E00580132 /* SettingViewController.swift in Sources */,
+				B2668C2320133C1100580132 /* MyPageViewController.swift in Sources */,
 				B2668C1D2013205E00580132 /* aViewController.swift in Sources */,
 				B2910BDD2012D79E00D48B21 /* ViewController.swift in Sources */,
 				B2F0EB8420130BFA008AE42B /* TestViewController.swift in Sources */,

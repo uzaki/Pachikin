@@ -12,13 +12,23 @@ import AVFoundation
 class aViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var dengerView: UIImageView!
+    @IBOutlet weak var roundMenu: UIView!
+    @IBOutlet weak var settingButton: UIButton!
+    @IBOutlet weak var eyeButton: UIButton!
+    @IBOutlet weak var twitterButton: UIButton!
     
     var audioPlayer:AVAudioPlayer!
     var moving = false
+    var menuAppere = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        roundMenu.layer.cornerRadius = 30
+        roundMenu.layer.masksToBounds = true
+        eyeButton.isHidden = true
+        settingButton.isHidden = true
+        twitterButton.isHidden = true
         // 再生する audio ファイルのパスを取得
         let audioPath = Bundle.main.path(forResource: "Warning", ofType:"mp3")!
         let audioUrl = URL(fileURLWithPath: audioPath)
@@ -67,8 +77,45 @@ class aViewController: UIViewController, AVAudioPlayerDelegate {
             moving = true
         }
     }
+    @IBAction func settingButtonTap(_ sender: Any) {
+        roundMenuDissAppear()
+    }
     
-
+    @IBAction func eyeButtonTap(_ sender: Any) {
+        roundMenuDissAppear()
+    }
+    
+    @IBAction func twitterTap(_ sender: Any) {
+        roundMenuDissAppear()
+    }
+    
+    @IBAction func roundMenuTap(_ sender: Any) {
+        if menuAppere{
+            roundMenuDissAppear()
+        }else{
+            roundMenuAppear()
+        }
+    }
+    
+    func roundMenuDissAppear(){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.roundMenu.transform = CGAffineTransform.identity
+            self.eyeButton.isHidden = true
+            self.settingButton.isHidden = true
+            self.twitterButton.isHidden = true
+        })
+        menuAppere = false
+    }
+    
+    func roundMenuAppear(){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.roundMenu.transform = CGAffineTransform.init(scaleX: 5, y: 5)
+            self.eyeButton.isHidden = false
+            self.settingButton.isHidden = false
+            self.twitterButton.isHidden = false
+        })
+        menuAppere = true
+    }
     /*
     // MARK: - Navigation
 
@@ -78,5 +125,6 @@ class aViewController: UIViewController, AVAudioPlayerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func returnHomeView(segue: UIStoryboardSegue) {}
 
 }
